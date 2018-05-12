@@ -7,6 +7,10 @@
 - [ ] Comment everything
 
 *Deadlines*
+<<<<<<< HEAD
 * Submit code: 14.05.
 
 tes
+=======
+* Submit code: 14.05.
+>>>>>>> d8f90e113fbfed7c6c6e62f7590d7364a9e92a2c
