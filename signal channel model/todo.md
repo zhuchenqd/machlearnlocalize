@@ -1,9 +1,9 @@
 # To Do
 
 - [ ] Solve array size limit issue
-- [ ] Finish autocorrelation function
+- [ ] Finish autocorrelation function ~Leon
 - [ ] Write energy detector
-- [ ] Set universal data vector size (According to UWB preamble format)
+- [ ] Set universal data vector size (According to UWB preamble format) ~Shi Nan
 - [ ] Comment everything
 
 *Deadlines*
