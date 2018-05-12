@@ -1,9 +1,9 @@
 function [ delayed ] = delay( input, A)
-%Summary: shifts an array with values by A to the right and fills the
-%remaining elements with zeros. The vector grows correspondingly.
-%IMPORTANT: A cannot be larger than the size of input.
+% Summary: shifts an array with values by A to the right and fills the
+% remaining elements with zeros. The vector grows correspondingly.
+% IMPORTANT: A cannot be larger than the size of input.
 
-l = length(input);
+    l = length(input);
 
     tail = input(end-A+1:end);
 
