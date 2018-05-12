@@ -1,4 +1,4 @@
-function [zBPF] = filteredNoise()
+function [zBPF] = filtered_noise()
 
 %TO DO: Set signal array dimension
 
