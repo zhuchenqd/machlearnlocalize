@@ -5,16 +5,24 @@ function [matr] = ftn(arr, n)
 % CONSTANTS
 global Tc;
 
-sprintf('%d', n)
-sprintf('%d', length(arr))
-sprintf('%d', n*Tc)
+sprintf('%d', n);
+sprintf('%d', length(arr));
+sprintf('%d', n*Tc);
 
-matr = zeros(n,length(arr) + n*Tc);
-sprintf('%d', length(matr))
-sprintf('%d', length(delay(arr, n*Tc)))
+l = length(arr);
+
+% Initialize matrix
+% Remark: If n is bigger than the array length, the row vectors after
+% length(arr) will be entirely zero.
+
+matr = zeros(n,l);
 
     for k = 1:n
-       matr(k,:) = cat(2, delay(arr, k*Tc), zeros(1, (n-k)*Tc));
+        if (k*Tc > l)
+            matr(k:n,:) = zeros(n-k+1,l);
+            break;
+        end
+        matr(k,:) = delay(arr, k*Tc);
     end
 
 end

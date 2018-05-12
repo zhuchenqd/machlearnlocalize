@@ -1,30 +1,30 @@
 function [ delayed ] = delay( input, A)
 % Summary:  Shifts an array with values by A to the right and fills the
-% remaining elements with zeros. The vector grows correspondingly.
+% remaining elements with zeros. The vector does NOT grow correspondingly.
+% Input:    Input vector, Shift time
+% Output:   Delayed input vector
 % IMPORTANT: A cannot be larger than the size of input.
 
 l = length(input);
 
 % Round input to nearest integer: Only shifts of whole nanoseconds allowed
+
 delta = round(A);
 
-tail = input(end-delta+1:end);
+% If delta is larger than the size of the data vector, the data vector is zero.
 
-if (delta==1)
-    tail = input(end);
-end
+if (A > l)
+    delayed = zeros(1,l);
+else
+    % Shift input circularly
 
+    delayed = circshift(input, delta);
 
-for k = 0:(l-1-delta)
-    input(l - k) = input(l - k - delta);
-end
+    % Set data before initial first element to zero
 
-for j = 1:delta
-    input(j) = 0;
-end
-
-    
-delayed = cat(2, input, tail);
+    for k=1:delta
+       delayed(k) = 0; 
+    end
 
 end
 

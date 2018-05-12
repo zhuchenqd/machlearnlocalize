@@ -17,7 +17,7 @@ t = (tmin):(incr):(tmax);           % Time vector
 L = length(t);                      % Signal length
 
 % Autocorrelation function
-% y calculation: All three factors are row vectors and are multiplicated
+% y calculation: All three factors are row vectors and are multiplied
 % element wise
 y = sinc(t/2).*((cos(pi*0.6*t/2))./((1-(0.6*t)).^2)).*cos(2*pi*t*4492.8*10^6);
 

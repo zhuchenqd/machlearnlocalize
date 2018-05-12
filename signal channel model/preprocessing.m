@@ -49,7 +49,9 @@ rBPF = zeros(1,datalength);
 % Cannot assess whether cross product will be viable.
 
     for k = 1:L
-        rBPF = rBPF + cross(alpha(k)*sqrt(Ep)*kron(Onevec, S), ftn(delay(Rphi, tau(k)+b), Ntot));
+        A = alpha(k)*sqrt(Ep)*kron(Onevec, S);
+        B = ftn(delay(Rphi, tau(k)+b), Ntot);
+        rBPF = rBPF + cross(A, B);
     end
     
 %length(kron(Onevec, S)) = 126976
