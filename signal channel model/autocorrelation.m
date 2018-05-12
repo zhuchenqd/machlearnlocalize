@@ -1,8 +1,11 @@
 function [rPhi] = autocorrelation()
-% Summary: Generates the autocorrelation function of r(t)
+% Summary:  Generates the autocorrelation function of r(t)
+%           Function (7) on page 1359
+%           Parameters taken from Table 1, page 1360
+%           Output: rPhi for rBPF calculation
 
 
-W = 2*499.2 * 10^6;                 % Bandwidth (Hz)
+W = 499.2 * 10^6;                   % Bandwidth (Hz)
 
 % Sampling
 
