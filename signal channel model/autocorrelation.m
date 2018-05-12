@@ -1,5 +1,5 @@
 function [rPhi] = autocorrelation()
-%Summary: Generates the autocorrelation function of r(t)
+% Summary: Generates the autocorrelation function of r(t)
 
 
 W = 2*499.2 * 10^6;                 % Bandwidth (Hz)
