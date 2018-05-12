@@ -2,9 +2,9 @@ function [matr] = ftn(arr, n)
 % Summary: Generates matrix from row vector arr in which the nth column is
 % the n-delayed version of arr.
 
-%CONSTANTS
-%Chip duration
-Tc = 2;
+% CONSTANTS
+
+
 
 sprintf('%d', n)
 sprintf('%d', length(arr))
