@@ -3,8 +3,7 @@ function [matr] = ftn(arr, n)
 % the n-delayed version of arr.
 
 % CONSTANTS
-
-
+global Tc;
 
 sprintf('%d', n)
 sprintf('%d', length(arr))
