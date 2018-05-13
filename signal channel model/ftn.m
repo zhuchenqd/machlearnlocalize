@@ -4,6 +4,7 @@ function [matr] = ftn(arr, n)
 % Input: Row vector to shift, Number of maximal shifts
 % Output: The generated [n x(length(arr)+n*Tc)] matrix
 % Tc: Chip duration taken from global_constants.m
+% Attention: NOT WORKING because delay causes matrix to get too large
 
 % Test ouputs
 sprintf('%d', n)
